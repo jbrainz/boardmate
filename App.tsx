@@ -1,20 +1,63 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NativeBaseProvider } from 'native-base';
+import { Provider } from 'react-redux';
+import Onboarding from './src/screens/Onboarding';
+import {store} from './src/store/store'
+import { useFonts } from 'expo-font';
+import { theme as customThemes } from './src/styles/globalStyles';
+
+export default function App() {
+  const [fontLoaded]=useFonts({
+    // Mulish font
+    'Mulish-Light':require("./assets/fonts/Mulish-Light.ttf"),
+    'Mulish-Regular':require("./assets/fonts/Mulish-Regular.ttf"),
+    'Mulish-Bold':require("./assets/fonts/Mulish-Bold.ttf"),
+// Readex font
+    'ReadexPro-Light':require("./assets/fonts/ReadexPro-Light.ttf"),
+    'ReadexPro-Regular':require("./assets/fonts/ReadexPro-Regular.ttf"),
+    'ReadexPro-Bold':require("./assets/fonts/ReadexPro-SemiBold.ttf")
+  })
+  
+
+
+if(fontLoaded){
+  
+    
+  return (
+    <Provider store={store}>
+      <NativeBaseProvider theme={customThemes}>
+      <Onboarding />
+      </NativeBaseProvider>
+    </Provider>
+  )
+}
+
+else{
+  return null
+}
+
+}
+
+
+
+<<<<<<< HEAD
+=======
+import { NativeBaseProvider } from 'native-base';
+import { Provider } from 'react-redux';
+import Onboarding from './src/screens/Onboarding';
+import {store} from './src/store/store'
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <NativeBaseProvider>
+      <Onboarding />
+      </NativeBaseProvider>
+    </Provider>
+  
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+>>>>>>> de8b53c ((PROJECT:SETUP) init)
+=======
+>>>>>>> 22efb90 (custom themes setup)

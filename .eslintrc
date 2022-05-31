@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+{
+  "extends": "react-native-wcandillon",
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "reanimated/no-multiple-animated-style-usages": 0
+  }
+}
+=======
+{
+  "extends": "react-native-wcandillon",
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "reanimated/no-multiple-animated-style-usages": 0
+  }
+}
+>>>>>>> de8b53c ((PROJECT:SETUP) init)
