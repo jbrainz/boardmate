@@ -1,37 +1,15 @@
-import React from 'react'
+import React from "react";
 import { Box, Container, Text, VStack } from "native-base";
 
 const Card = () => {
   return (
     <Container p="8" h="100%">
       <VStack justifyContent="center" flex={1} alignItems="center">
-        <Text textAlign="center" color="error.100" fontFamily="ReadexProBold" fontWeight={300} fontSize="3xl">
-          The first ever component and working fine
-        </Text>
-       
+      
+        <Text  fontFamily="ReadexProLight" color="error.100" fontSize="4xl">First component working with fonts</Text>
       </VStack>
     </Container>
   );
 };
 
 export default Card;
-<<<<<<< HEAD
-=======
-import { Box, Container, Text, VStack } from "native-base";
-
-const Card = () => {
-  return (
-    <Container p="8" h="100%">
-      <VStack justifyContent="center" flex={1} alignItems="center">
-        <Text textAlign="center" bold fontSize="3xl">
-          The first ever component
-        </Text>
-      </VStack>
-    </Container>
-  );
-};
-
-export default Card;
->>>>>>> de8b53c ((PROJECT:SETUP) init)
-=======
->>>>>>> 22efb90 (custom themes setup)
