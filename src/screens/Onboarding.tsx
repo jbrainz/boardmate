@@ -1,7 +1,9 @@
+import React from 'react'
 import Card from "../components/Card";
 
-export default function() {
+function Onboarding(): JSX.Element {
     return(
         <Card />
     )
 }
+export default Onboarding
